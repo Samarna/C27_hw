@@ -17,7 +17,7 @@ function setup(){
 
     bird = new Bird(100,100);
     
-    sling = new Slingshot(bird.body,{x : 200,y : 100});
+    sling = new Sling(bird.body,{x : 200,y : 100});
 }
 
 function draw(){
