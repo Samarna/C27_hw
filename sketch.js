@@ -24,14 +24,6 @@ function draw(){
     background("white");
     Engine.update(engine);
     strokeWeight(4);
-    
-    if(keyCode === 32){ 
-        bird.x = mouseX;
-    }
-    if(keyCode == 13){
-        bird.x = 100;
-        bird.y = 100;
-    }
         
 
     fill(225,225,225);
@@ -39,4 +31,11 @@ function draw(){
 
     bird.display();
     sling.display();    
+}
+function keyPressed(){
+    if(keyCode === 32 && bird.body.speed < 1){
+        bird.trajectory = [];
+        Matter.Body.setPosition(bird.body,{x : 200 , y :50})
+        slingshot.attach(bird.body);
+    }
 }
