@@ -17,7 +17,7 @@ function setup(){
 
     bob = new Bob(100,100);
     
-    string = new String(bird.body,{x : 200,y : 100});
+    string = new String(bob.body,{x : 200,y : 100});
 }
 
 function draw(){
