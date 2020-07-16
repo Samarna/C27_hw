@@ -14,9 +14,9 @@ function setup(){
     world = engine.world;
 
     ground = new Ground(600,height,1200,20);
+        
+    bob = new Bob(100,100,10);
 
-    bob = new Bob(100,100);
-    
     string = new String(bob.body,{x : 200,y : 100});
 }
 
@@ -25,12 +25,10 @@ function draw(){
     Engine.update(engine);
     strokeWeight(4);
         
-
     fill(225,225,225);
     ground.display();
-
+    string.display(); 
     bob.display();
-    string.display();    
 }
 function keyPressed(){
     if(keyCode === 32 && bob.body.speed < 1){
