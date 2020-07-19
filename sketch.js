@@ -32,13 +32,14 @@ function draw(){
 }
 function keyPressed(){
     if(keyCode === 32 && bob.body.speed < 1){
-        bob.body.position.x = mouseX
-        bob.body.position.y = mouseY
+        Matter.Body.setPosition(bob.body,{x:200,y:100});
     }
-}
-function stop(){
     if(keyCode === 13 && bob.body.speed > 1){
-        bob.body.position.x = 100;
-        bob.body.position.y = 100;
+        //bob.body.position.x = 100;
+        //bob.body.position.y = 100;
+        Matter.Body.setStatic(bob.body,true);
+        Matter.Body.setPosition(bob.body,{
+            x:200,y:250
+        });
     }
 }
