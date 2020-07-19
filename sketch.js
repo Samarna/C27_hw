@@ -32,7 +32,8 @@ function draw(){
 }
 function keyPressed(){
     if(keyCode === 32 && bob.body.speed < 1){
-        Matter.Body.setPosition(bob.body,{x:200,y:100});
+        Matter.Body.setPosition(bob.body,{x:100,y:100});
+        Matter.Body.setStatic(bob.body,false);
     }
     if(keyCode === 13 && bob.body.speed > 1){
         //bob.body.position.x = 100;
